@@ -1,0 +1,41 @@
+{
+
+  "manifest_version": 2,
+  "name": "Screentime",
+  "version": "1.0.1",
+
+  "description": "Definitely one of the tools of all time - this extension tracks time spent on websites.",
+
+  "icons": {
+    "48": "iconfolder/iconimage4.png",
+    "96": "iconfolder/iconimage4-96.png",
+    "128": "iconfolder/iconimage4-128.png"
+  },
+
+  
+  "permissions": [
+  "tabs", "storage"
+  ],
+
+
+  "background": {
+    "scripts": ["javascriptfiles/screentime.js"],
+    "persistent": true
+  },
+
+
+  "browser_action": {
+    "default_icon": "iconfolder/iconimage4.png",
+    "default_title": "Screentime",
+    "default_popup": "htmlfiles/main.html",
+    "theme_icons": [{
+      "light": "iconfolder/iconimage4.png",
+      "dark": "iconfolder/iconimage4-light.png",
+      "size": 32
+    }]
+  }
+  
+  
+  
+
+}

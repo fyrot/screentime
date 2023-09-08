@@ -1,0 +1,94 @@
+<html>
+<head>
+    <style>
+        @font-face {
+            font-family: Oxygenlight;
+            src: url(../Oxygen-Light.ttf);
+        }
+        body {
+            background-color: rgb(61, 57, 66);
+            line-height: 80%;
+            width: 175px;
+            height: 200px;
+            font-family: Oxygenlight ;
+            color: rgb(242,242,242)
+        }
+        
+        header {
+            color: rgb(242, 242, 242);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 150%
+        }
+        .screentime {
+            animation: fadeInTop 0.6s ease;
+            animation-iteration-count: 1;
+            animation-fill-mode: filled;
+            font-size: 100%;
+            color: rgb(242, 242, 242);
+        }
+        @keyframes fadeInTop {
+            0% {
+                opacity: 0%;
+                transform: translateY(-25%);
+            }
+            100% {
+                opacity: 100%;
+                transform: translateY(0);
+            }
+        }  
+        .reset {
+            transition-duration: 0.4s;
+            border-radius: 4px;
+            size: 150%;
+            border: none;
+            background-color: rgb(242, 242, 242);
+            color: rgb(255, 111, 111);
+            margin: auto;
+            width: auto;
+            text-shadow: 2px;
+            font-family: Oxygenlight
+
+        }
+        .reset:hover {
+            background-color: rgb(255,111,111);
+            color: rgb(242, 242, 242);
+        }
+        .centerdiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 175px;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .fixedreturn {
+            position: fixed;
+            bottom: 20px;
+            left: 8px;
+        }
+    </style>
+</head>
+<body>
+<p class="screentime" style="position: relative;top: 2%;margin-top: -2%"> Settings </p>
+<label for="timesetting" style="font-size: 90%">Compact Time</label>
+<input type="checkbox" id="timesetting" name="settings">
+<br>
+<label for="graphviewsetting" style="font-size: 90%" title="Check to have graphs be scaled according to the top viewed website.">Graph Scale</label> 
+<input type="checkbox" id="graphviewsetting" name="settings">
+<br>
+<br>
+<div class="centerdiv">
+    <button id="resettime" title="Resets the time collected for all webpages." class="reset">Reset Data</button>
+</div>
+<p class="centerdiv" style="text-shadow: #c300ff;font-size: 70%"> Next update: custom extension themes + more </p>
+<p id="savestatus" style="position: fixed; bottom: 7px; right: 8px;"></p>
+<a href="main.html" style="color: rgb(235, 202, 245);" class="fixedreturn"> return </a>
+<script src="../javascriptfiles/settings.js"></script>
+</body>
+
+</html>

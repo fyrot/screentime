@@ -1,0 +1,58 @@
+<html>
+<head>
+    <style>
+        @font-face {
+            font-family: Oxygenlight;
+            src: url(../Oxygen-Light.ttf);
+        }
+        @font-face {
+            font-family: Oxygenregluar;
+            src: url(../Oxygen-Regular.ttf);
+        }
+        body {
+            background-color: rgb(61, 57, 66);
+            line-height: 100%;
+            width: 175px;
+            height: 200px;
+            font-family: Oxygenlight ;
+        }
+        header {
+            color: rgb(242, 242, 242);
+            font-size: 150%;
+            line-height: 100%;
+        }
+        .screentime {
+            animation: fadeInTop 0.6s ease;
+            animation-iteration-count: 1;
+            animation-fill-mode: filled;
+            color: rgb(242, 242, 242);
+        }
+        @keyframes fadeInTop {
+            0% {
+                opacity: 0%;
+                transform: translateY(-25%);
+            }
+            100% {
+                opacity: 100%;
+                transform: translateY(0);
+            }
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        
+                
+    </style>
+</head>
+<body>
+<header class="screentime" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 150%;line-height: 100%;"> Screentime </header>
+<br>
+<a href="default.html" style="margin-left:10%;color:rgb(235, 202, 245);font-size:115%;">stats</a>
+<br>
+<a href="settings.html" style="margin-left:10%;color:rgb(235, 202, 245);font-size:115%;">settings</a>
+<script src="../javascriptfiles/checkfornull.js"></script>
+</body>
+</html>

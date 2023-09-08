@@ -1,0 +1,154 @@
+<html>
+<head>
+    <style>
+        @font-face {
+            font-family: Oxygenlight;
+            src: url(../Oxygen-Light.ttf);
+        }
+        @font-face {
+            font-family: Oxygenbold;
+            src: url(../Oxygen-Bold.ttf);
+        }
+        body {
+            background-color: rgb(61, 57, 66);
+            line-height: 25%;
+            width: 175px;
+            height: 200px;
+            display: inline-block;
+            vertical-align: bottom;
+            font-family: Oxygenlight;
+        }
+        
+        header {
+            color: rgb(242, 242, 242);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 125%
+        }
+        p {
+            color:rgb(242, 242, 242);
+        }
+        .screentime {
+            animation: fadeInTop 0.6s ease;
+            animation-iteration-count: 1;
+            animation-fill-mode: filled;
+            font-size: 100%;
+            color: rgb(242, 242, 242);
+        }
+        @keyframes fadeInTop {
+            0% {
+                opacity: 0%;
+                transform: translateY(-25%);
+            }
+            100% {
+                opacity: 100%;
+                transform: translateY(0);
+            }
+        }
+        .counter {
+            color:rgb(242, 242, 242);
+            font-size: 75%;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 105%;
+            transition-duration: 0.2s;
+        }
+        .counter:hover {
+            text-decoration: underline;
+        }
+        .topfive {
+            background-color: rgb(41, 37, 46);
+            vertical-align: top;
+            margin-left: 4%;
+            border-radius: 5%;
+            border-top-right-radius: 0%;
+            border-top-left-radius: 0%;
+            max-width: 168px;
+            overflow-y:scroll;
+            overflow-wrap: break-word;
+            height:100px;
+            scrollbar-width: thin;
+            scrollbar-color: rgb(175,175,175) rgb(41, 37, 46);
+        }
+        .topfivetext {
+            background-color: rgb(41, 37, 46);
+            margin-left: 4%;
+            border-radius: 7px 7px 0px 0px;
+            font-size: 85%;
+            line-height: 100%;
+            max-width: 50px;
+            padding: 2%;
+            position: relative;
+            top: 14px;
+            margin-top: -14px;
+            
+        }
+        .graphbar {
+            height: 10px;
+            max-width: 168px;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .fixedreturn {
+            position: relative;
+            top: 10px;
+            margin-top: -10px;
+        }
+        .currentcounter {
+            text-shadow: 3px 2px #c300ff;
+            background-color: rgb(41, 37, 46);
+            line-height: 100%;
+            margin-left: 6.5px;
+            border-radius: 2%;
+            font-size: 85%;
+            overflow-y: hidden;
+            overflow-x: auto;
+            scrollbar-width: thin;
+            scrollbar-gutter: auto;
+            white-space: nowrap;
+            position: relative;
+            bottom: 8px;
+            margin-bottom: -8px;
+            padding-top: 3px;
+            padding: 2%;
+            padding-bottom: 2%;
+            scrollbar-color: rgb(195, 0, 255) rgb(41, 37, 46);;
+            max-width: 167px;
+            
+        }
+    </style>
+</head>
+<body>
+<p class="screentime"style="position: relative;top: 2%;margin-top: -2%"> Stats </p>
+
+<br>
+<p class="topfivetext"> Top Five </p>
+<div id = "counterdiv" class="topfive">
+    <p> <a id = "counter1" class="counter" style="text-decoration-color: rgb(255, 132, 106)"> initialising </a> </p>  <!-- rip abcabcabc -->
+    <p> <a id = "counter2" class="counter" style="text-decoration-color: rgb(255, 207, 106)">  </a> </p>
+    <p> <a id = "counter3" class="counter" style="text-decoration-color: rgb(229, 255, 106)">  </a> </p>
+    <p> <a id = "counter4" class="counter" style="text-decoration-color: rgb(155, 255, 106)">  </a> </p>
+    <p> <a id = "counter5" class="counter" style="text-decoration-color: rgb(106, 217, 255)">  </a> </p>
+    <br>
+</div>
+
+<div class = "graphbar" style = "width: 168px; background-color: rgb(175,175,175); margin-left: 4%;">
+    <div class = "graphbar" id = "counter1graph" style="width: 0px;background-color: rgb(255, 132, 106);">
+        <div class = "graphbar" id = "counter2graph" style="width: 0px;background-color: rgb(255, 207, 106);">
+            <div class = "graphbar" id = "counter3graph" style="width: 0px;background-color: rgb(229, 255, 106);">
+                <div class = "graphbar" id = "counter4graph" style="width: 0px;background-color: rgb(155, 255, 106);">
+                    <div class = "graphbar" id = "counter5graph" style="width: 0px;background-color: rgb(106, 217, 255);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p id = "currentcounter" title = "Stats for current tab." class="currentcounter"> Cannot load this website's time! </p>
+<a href="main.html" style="color: rgb(235, 202, 245);" class="fixedreturn"> return </a>
+<script src="../javascriptfiles/screentime2.js"></script>
+
+</body>
+</html> <!-- original main file -->
